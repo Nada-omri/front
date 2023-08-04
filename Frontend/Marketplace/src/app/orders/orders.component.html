@@ -1,0 +1,123 @@
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">a</th>
+        <th scope="col">b</th>
+        <th scope="col">c</th>
+        <th scope="col">d</th>
+        <th scope="col">e</th>
+        <th scope="col">f</th>
+        <th scope="col">g</th>
+        <th scope="col">chat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr (click)="toggleTag(0)">
+        <th scope="row"><mat-icon>keyboard_arrow_down</mat-icon></th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+       <td> <span id="boot-icon" class="bi bi-chat" style="font-size: 25px;"></span></td>
+      </tr>
+      <tr *ngIf="showMe === 0">
+        <td colspan="7">
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">a</th>
+                  <th scope="col">b</th>
+                  <th scope="col">c</th>
+                  <th scope="col">d</th>
+                  <th scope="col">e</th>
+                  <th scope="col">f</th>
+                  <th scope="col">g</th>
+                </tr>
+              </thead>
+              <tbody>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td> </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr (click)="toggleTag(1)">
+        <th scope="row"><mat-icon>keyboard_arrow_down</mat-icon></th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+       <td> <span id="boot-icon" class="bi bi-chat" style="font-size: 25px;"></span></td>
+      </tr>
+      <tr *ngIf="showMe === 1">
+        <td colspan="7">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                      <th scope="col">a</th>
+                      <th scope="col">b</th>
+                      <th scope="col">c</th>
+                      <th scope="col">d</th>
+                      <th scope="col">e</th>
+                      <th scope="col">f</th>
+                      <th scope="col">g</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td> </tbody>
+              </table>
+        </td>
+      </tr>
+      <tr (click)="toggleTag(2)">
+        <th scope="row"><mat-icon>keyboard_arrow_down</mat-icon></th>
+        <td>Larry the Bird</td>
+        <td>@twitter</td>
+        <th scope="row">3</th>
+        <td>Larry the Bird</td>
+        <td>@twitter</td>
+        <td>@twitter</td>
+        <td>
+          <span id="boot-icon" class="bi bi-chat" style="font-size: 25px;"></span></td>
+      </tr>
+      <tr *ngIf="showMe === 2">
+        <td colspan="7">
+          <table class="table table-striped">
+           
+                <thead>
+                    <tr>
+                      <th scope="col">a</th>
+                      <th scope="col">b</th>
+                      <th scope="col">c</th>
+                      <th scope="col">d</th>
+                      <th scope="col">e</th>
+                      <th scope="col">f</th>
+                      <th scope="col">g</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td> </tbody>
+           
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

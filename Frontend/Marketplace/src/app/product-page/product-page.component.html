@@ -1,0 +1,45 @@
+<app-spinner></app-spinner>
+  <div *ngIf="productDetails">
+  
+
+    <div class="details">
+        <div class="header">
+            
+        <div class="origins">
+            <span >
+                   <img [src]="Url+productDetails.image" height="240" width="300" >
+            </span>
+        </div>
+            <span class="name">
+                {{ productDetails.name }}
+            </span>
+            <span class="favorite {{productDetails.favorite?'':'not'}}">
+                ❤
+            </span>
+        </div>
+        <div class="rating">
+         
+        </div>
+
+        <div class="origins">
+            <span >
+                {{productDetails.description}}
+            </span>
+        </div>
+        
+        <div class="origins">
+            <span >
+                {{productDetails.price}}
+            </span>
+        </div>
+
+
+
+        <div class="price">
+            <span>{{productDetails.prixunitaire|currency}}</span>
+        </div>
+
+        <button (click)="addToCart()" >Add To Cart</button>
+    </div>
+
+</div>

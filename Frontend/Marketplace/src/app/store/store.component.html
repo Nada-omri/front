@@ -1,0 +1,122 @@
+<app-spinner></app-spinner>
+<div class="cont">
+	<div class="card">
+		<article class="filter-group">
+			<header class="card-header">
+				<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+					<i class="icon-control fa fa-chevron-down"></i>
+					<h6 class="title">Product type</h6>
+	
+				</a>
+			</header>
+			<div class="filter-content collapse show" id="collapse_1" >
+				<div class="card-body">
+					<form class="pb-3">
+			  <div class="input-group">
+				<input type="text" class="form-control" placeholder="Search">
+				<div class="input-group-append">
+				  <button class="btn btn-light" type="button"><i class="fa fa-search"></i></button>
+				</div>
+	
+			  </div>
+			  </form>
+			  <ul class="list-menu">
+				<li><a href="#">Phone and devices </a></li>
+				<li><a href="#">Watches </a></li>
+				<li><a href="#">Home automation  </a></li>
+				<li><a href="#">smart devices </a></li>
+				<li><a href="#">wearble technology </a></li>
+			
+				</ul>
+	
+				</div> 
+			</div>
+		</article> 
+		<article class="filter-group">
+			<header class="card-header">
+				<a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
+					<i class="icon-control fa fa-chevron-down"></i>
+					<h6 class="title">Brands </h6>
+				</a>
+			</header>
+			<div class="filter-content collapse show" id="collapse_2" >
+				<div class="card-body">
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" checked="" class="custom-control-input">
+					  <div class="custom-control-label">Asus
+						  <b class="badge badge-pill badge-light float-right">120</b>  </div>
+					</label>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" checked="" class="custom-control-input">
+					  <div class="custom-control-label">Apple 
+						  <b class="badge badge-pill badge-light float-right">15</b>  </div>
+					</label>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" checked="" class="custom-control-input">
+					  <div class="custom-control-label">dell
+						  <b class="badge badge-pill badge-light float-right">35</b> </div>
+					</label>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" checked="" class="custom-control-input">
+					  <div class="custom-control-label">Samsung 
+						  <b class="badge badge-pill badge-light float-right">89</b> </div>
+					</label>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <div class="custom-control-label">Logitec 
+						  <b class="badge badge-pill badge-light float-right">30</b>  </div>
+					</label>
+		</div> 
+			</div>
+		</article>
+		<article class="filter-group">
+			<header class="card-header">
+				<a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
+					<i class="icon-control fa fa-chevron-down"></i>
+					<h6 class="title">Price range </h6>
+				</a>
+			</header>
+		<div class="card-body">
+  <input type="range" class="custom-range" min="0" max="100" [(ngModel)]="sliderValue" (input)="updateMinMax()">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Min</label>
+      <input class="form-control" placeholder="$0" type="number" [(ngModel)]="minValue">
+    </div>
+    <div class="form-group text-right col-md-6">
+      <label>Max</label>
+      <input class="form-control" placeholder="$1,0000" type="number" [(ngModel)]="maxValue">
+    </div>
+  </div>
+  <button class="btn btn-block btn-primary" (click)="applyRange()">Apply</button>
+</div>
+
+		
+		</article> </div>
+	
+	<div class="card2">
+		<div>
+			<input type="text" placeholder="Search !" style="width: 40; height: 20;"/>
+		
+		</div>
+		
+		
+	<ul class="products">
+	  <li *ngFor="let product of filteredProducts"  class="product">
+	
+	   
+		<a [routerLink]="['/product', product.id]" class="containx">
+		  <div class="content" (click)="getProduit(product?.id, product)">
+			<img [src]="Url+product.image" height="240" width="300" >
+			<div class="name">{{ product.name }}</div>
+			<div class="name">{{ product.description }}</div>
+			<span class="favorite" [class.not]="!product.description">❤</span>
+			<div class="stars"><span>✩✩✩✩✩</span></div>
+		  </div>
+		  <div class="price"><span>{{ product.price | currency }}</span></div>
+		</a>
+	
+	
+	  </li>
+	</ul></div>
+	</div>
